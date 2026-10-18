@@ -1,0 +1,4 @@
+Orbitron (fonts/Orbitron.woff2) and Noto Sans KR (fonts/NotoSansKR.woff2)
+were downloaded from Google Fonts and are licensed under the SIL Open Font
+License 1.1. Both are the same fonts the site https://lotus-garden-protocol.vercel.app/
+loads from Google Fonts. Latin subsets only.
