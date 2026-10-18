@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-400.woff2") format("woff2");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("fonts/Inter-700.woff2") format("woff2");
+        font-weight: 700;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0a0a0a;
+      }
+      #scene {
+        width: 1920px;
+        height: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #b9a4f5 0%, #9ec5fb 100%);
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+      }
+      #card {
+        width: 760px;
+        padding: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        border-radius: 32px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(30px);
+        box-shadow: 0 24px 60px rgba(40, 30, 90, 0.18);
+      }
+      #label {
+        color: #6b6b78;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      #count {
+        color: #1d1b3a;
+        font-size: 240px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        font-variant-numeric: tabular-nums;
+      }
+      #pill {
+        padding: 14px 32px;
+        border-radius: 999px;
+        background: #34c759;
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="6"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div id="scene" class="clip" data-start="0" data-duration="6" data-track-index="0">
+        <div id="card">
+          <div id="label">My first render</div>
+          <div id="count">0</div>
+          <div id="pill">Made with Claude Code</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const counter = { value: 0 };
+      const countEl = document.querySelector("#count");
+
+      // The card rises in while fading up and scaling from 0.96.
+      tl.fromTo(
+        "#card",
+        { opacity: 0, y: 60, scale: 0.96 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power3.out" },
+        0
+      );
+      tl.fromTo("#label", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, 0.3);
+
+      // The number counts from 0 to 100 over 2 seconds.
+      tl.to(
+        counter,
+        {
+          value: 100,
+          duration: 2,
+          ease: "power2.out",
+          onUpdate: () => {
+            countEl.textContent = Math.round(counter.value);
+          },
+        },
+        0.4
+      );
+
+      // The green pill pops in at 4 seconds with a small overshoot.
+      tl.fromTo(
+        "#pill",
+        { opacity: 0, scale: 0 },
+        { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" },
+        4
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
