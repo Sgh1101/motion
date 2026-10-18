@@ -24,7 +24,8 @@
 - 배포 프로젝트: `lotus-garden-notice`, id `prj_AgtSOCKk9RrfZe5qLclAHnLICPnX`
   - 배포 완료. 주소 https://lotus-garden-notice-sgh1101s-projects.vercel.app/ 에서 열립니다.
   - 이 프로젝트만 Vercel 배포 보호(SSO)를 껐습니다. 팀 기본값이 켜져 있으면 방문자가 로그인 화면을 보게 됩니다.
-- 남은 단계: 옛 주소 `lotus-garden-protocol.vercel.app`은 아직 13fps 프로젝트에 붙어 있습니다. 대시보드에서 13fps의 도메인 목록에서 떼어낸 뒤, 이 안내 프로젝트에 붙여야 합니다.
+- 완료 (2026-10-18): 옛 주소 `lotus-garden-protocol.vercel.app`을 13fps에서 떼고 이 안내 프로젝트에 붙였습니다. 옛 주소의 모든 경로(`/play.html` 등)가 안내 페이지로 열립니다. `notice-page/vercel.json`이 모든 경로를 `index.html`로 보내는 설정입니다.
+- 게임 주소는 https://13fps.vercel.app/ 하나입니다.
 
 ## 작업 브랜치
 
