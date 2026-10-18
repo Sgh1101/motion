@@ -18,10 +18,13 @@
 - 렌더: `npx hyperframes render -o renders/site-promo.mp4` (Chrome 경로가 없으면 `HYPERFRAMES_BROWSER_PATH`를 지정하거나 `npx hyperframes browser`를 실행하세요.)
 - `renders/`와 `.hyperframes/`는 git에서 제외되어 있습니다.
 
-## 옛 주소 안내 페이지 (준비됨, 아직 미배포)
+## 옛 주소 안내 페이지
 
 - 위치: `motion-graphics/notice-page/index.html` (정적 HTML 1장, 버튼 → https://13fps.vercel.app/)
-- 옛 주소 `lotus-garden-protocol.vercel.app`은 지금 13fps 프로젝트에 붙어 있어서, 먼저 대시보드에서 떼어낸 뒤 이 페이지를 배포해 붙여야 합니다.
+- 배포 프로젝트: `lotus-garden-notice`, id `prj_AgtSOCKk9RrfZe5qLclAHnLICPnX`
+  - 배포 완료. 주소 https://lotus-garden-notice-sgh1101s-projects.vercel.app/ 에서 열립니다.
+  - 이 프로젝트만 Vercel 배포 보호(SSO)를 껐습니다. 팀 기본값이 켜져 있으면 방문자가 로그인 화면을 보게 됩니다.
+- 남은 단계: 옛 주소 `lotus-garden-protocol.vercel.app`은 아직 13fps 프로젝트에 붙어 있습니다. 대시보드에서 13fps의 도메인 목록에서 떼어낸 뒤, 이 안내 프로젝트에 붙여야 합니다.
 
 ## 작업 브랜치
 
