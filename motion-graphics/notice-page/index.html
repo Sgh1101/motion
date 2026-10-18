@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>13 - 새 주소로 이전했습니다</title>
+    <meta name="theme-color" content="#0a0d12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    />
+    <style>
+      :root {
+        --void: #0a0d12;
+        --panel: #141922;
+        --line: #2a3444;
+        --ink: #e8edf4;
+        --steel: #8a97ab;
+        --red: #ff3b4e;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        min-height: 100%;
+        background: var(--void);
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 16px;
+        font-family: "Noto Sans KR", system-ui, sans-serif;
+        color: var(--ink);
+        background: radial-gradient(ellipse 700px 420px at 50% 0%, rgba(34, 211, 238, 0.1), transparent 70%),
+          var(--void);
+      }
+      main {
+        width: 100%;
+        max-width: 560px;
+        padding: 48px 40px;
+        text-align: center;
+        background: var(--panel);
+        border: 2px solid var(--line);
+        border-radius: 24px;
+      }
+      .logo {
+        font-family: "Orbitron", system-ui, sans-serif;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 1;
+        background: linear-gradient(180deg, #e8edf4 0%, #8a97ab 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      h1 {
+        margin-top: 24px;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+      .desc {
+        margin-top: 16px;
+        font-size: 17px;
+        line-height: 1.6;
+        color: var(--steel);
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 32px;
+        padding: 18px 36px;
+        border-radius: 999px;
+        background: var(--red);
+        color: #ffffff;
+        font-family: "Orbitron", system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+      }
+      .btn:focus-visible {
+        outline: 2px solid var(--ink);
+        outline-offset: 4px;
+      }
+      .url {
+        margin-top: 20px;
+        font-size: 15px;
+        color: var(--steel);
+      }
+      .note {
+        margin-top: 28px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--steel);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="logo">13</div>
+      <h1>13은 새 주소로 이전했습니다</h1>
+      <p class="desc">이 주소에서는 더 이상 게임을 제공하지 않습니다.<br />아래 버튼을 눌러 새 주소로 이동해 주세요.</p>
+      <a class="btn" href="https://13fps.vercel.app/">새 주소로 이동</a>
+      <p class="url">https://13fps.vercel.app/</p>
+      <p class="note">즐겨찾기나 공유 링크도 새 주소로 바꿔 주세요.</p>
+    </main>
+  </body>
+</html>
